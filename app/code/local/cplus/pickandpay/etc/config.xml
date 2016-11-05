@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <cplus_pickandpay>
+      <version>1.0.0.0</version>
+    </cplus_pickandpay>
+  </modules>
+ 
+  <global>
+    <fieldsets>
+      <sales_convert_quote_payment>
+        <cplus_field_one>
+          <to_order_payment>*</to_order_payment>
+        </cplus_field_one>
+        <cplus_field_two>
+          <to_order_payment>*</to_order_payment>
+        </cplus_field_two>
+      </sales_convert_quote_payment>
+    </fieldsets>
+     
+    <helpers>
+      <pickandpay>
+        <class>cplus_pickandpay_Helper</class>
+      </pickandpay>
+    </helpers>
+ 
+    <blocks>
+      <pickandpay>
+        <class>cplus_pickandpay_Block</class>
+      </pickandpay>
+    </blocks>
+         
+    <models>
+      <pickandpay>
+        <class>cplus_pickandpay_Model</class>
+      </pickandpay>
+    </models>
+ 
+    <resources>
+      <pickandpay_setup>
+        <setup>
+          <module>cplus_pickandpay</module>
+        </setup>
+      </pickandpay_setup>
+    </resources>
+  </global>
+ 
+  <default>
+    <payment>
+      <pickandpay>
+        <active>1</active>
+        <model>pickandpay/pickandpay</model>
+        <order_status>pending</order_status>
+        <title>pickandpay</title>
+        <allowspecific>0</allowspecific>
+        <payment_action>sale</payment_action>
+      </pickandpay>
+    </payment>
+  </default>
+   
+  <frontend>
+    <routers>
+      <pickandpay>
+        <use>standard</use>
+        <args>
+          <module>cplus_pickandpay</module>
+          <frontName>pickandpay</frontName>
+        </args>
+      </pickandpay>
+    </routers>
+  </frontend>
+</config>
