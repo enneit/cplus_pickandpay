@@ -1,3 +1,4 @@
+<xml>
 <config>    
   <sections>
     <payment>
@@ -59,3 +60,4 @@
     </payment>
   </sections>
 </config>
+</xml>
